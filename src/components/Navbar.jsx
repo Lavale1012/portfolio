@@ -1,5 +1,8 @@
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
+import { BiX } from "react-icons/bi";
+import { BiMenu } from "react-icons/bi";
+
 import { useState } from "react";
 
 const Navbar = () => {
@@ -57,6 +60,63 @@ const Navbar = () => {
           </a>
         </li>
       </ul>
+      {IsOpen ? (
+        <BiX onClick={toggleMenu} className="block md:hidden text-4xl" />
+      ) : (
+        <BiMenu onClick={toggleMenu} className="block md:hidden text-4xl" />
+      )}
+      {IsOpen && (
+        <div
+          className={`fixed right-0 top-[84px] flex h-screen w-1/2 flex-col items-start justify-start gap-10 border-gray-800 bg-black/90 p-12 ${
+            IsOpen ? "block" : "hidden"
+          }`}
+        >
+          <ul className=" flex flex-col gap-8">
+            <a
+              href="#Home"
+              className=" cursor-pointer opacity-70 transition-all duration-300 hover:opacity-100"
+            >
+              <li>Home</li>
+            </a>
+            <a
+              href="#Tech"
+              className=" cursor-pointer opacity-70 transition-all duration-300 hover:opacity-100"
+            >
+              <li>Tech</li>
+            </a>
+            <a
+              href="#Projects"
+              className=" cursor-pointer opacity-70 transition-all duration-300 hover:opacity-100"
+            >
+              <li>Projects</li>
+            </a>
+            <a
+              href="#Contact"
+              className=" cursor-pointer opacity-70 transition-all duration-300 hover:opacity-100"
+            >
+              <li>Contact</li>
+            </a>
+          </ul>
+          <ul className="flex flex-wrap gap-5">
+            <li>
+              <a
+                href="#github"
+                className="cursor-pointer opacity-70 transition-all duration-300 hover:opacity-100 text-xl hover:text-orange-500"
+              >
+                <FaGithub />
+              </a>
+            </li>
+            <li>
+              <a
+                href="#LinkedIn"
+                className="cursor-pointer opacity-70 transition-all duration-300 hover:opacity-100 hover:text-blue-800 text-xl"
+              >
+                <FaLinkedin />
+              </a>
+            </li>
+          </ul>
+        </div>
+      )}
     </nav>
   );
 };
