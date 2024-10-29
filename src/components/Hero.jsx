@@ -1,10 +1,21 @@
 import image from "/public/profile.jpeg";
 import { motion } from "framer-motion";
 
+const ProjectCard = (project) => {
+  return (
+    <div>
+      <img src="" />
+      <div>{project.title}</div>
+      <div>{project.description}</div>
+      <div>{project.Tech}</div>
+    </div>
+  );
+};
+
 const Hero = () => {
   return (
     <div
-      id="home"
+      id="Home"
       className=" px-16 flex min-h-screen w-full items-center justify-center py-28   flex-col gap-5 "
     >
       <div className="flex flex-col justify-center items-center gap-10 text-white">

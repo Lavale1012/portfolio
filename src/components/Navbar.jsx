@@ -14,7 +14,7 @@ const Navbar = () => {
         href="#"
         className=" bg-gradient-to-r from-blue-500 to-pink-500 bg-clip-text text-transparent opacity-80 text-3xl font-semibold transition-all duration-300 hover:opacity-100"
       >
-        Lavale
+        Lavale's Porfolio
       </a>
       <ul className="hidden md:flex gap-10">
         <a

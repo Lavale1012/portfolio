@@ -4,4 +4,16 @@
 
 * {
   font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: rgb(0, 0, 0, 0.9);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, rgba(0, 62, 196), rgba(184, 0, 155));
 }

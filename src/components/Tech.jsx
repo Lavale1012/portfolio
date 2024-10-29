@@ -74,7 +74,10 @@ const Tech = () => {
           whileInView="visible"
           transition={{ duration: 0.5 }}
         >
-          <FaReact className="cursor-pointer text-[80px] text-[#61DAFB] transition-all duration-300 hover:-translate-y-5 sm:text-[100px] md:text-[120px]" />
+          <FaReact
+            className="cursor-pointer text-[80px] text-[#61DAFB] transition-all duration-300 hover:-translate-y-5 sm:text-[100px] md:text-[120px] animate-spin "
+            style={{ animationDuration: "6s" }}
+          />
         </motion.div>
         <motion.div
           variants={variants}
