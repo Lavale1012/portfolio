@@ -9,14 +9,14 @@ const Navbar = () => {
   const [IsOpen, setIsOpen] = useState(false);
   const toggleMenu = () => setIsOpen(!IsOpen);
   return (
-    <nav className=" fixed top-0 z-10 flex w-full items-center justify-between border-b border-b-gray-700 bg-black/70 px-16 py-6 text-white backdrop-blur-md md:justify-evenly">
+    <nav className="   fixed top-0 z-10 flex w-full items-center justify-between border-b border-b-gray-700 bg-black/70 px-16 py-6 text-white backdrop-blur-md md:justify-evenly">
       <a
         href="#"
         className=" bg-gradient-to-r from-blue-500 to-pink-500 bg-clip-text text-transparent opacity-80 text-3xl font-semibold transition-all duration-300 hover:opacity-100"
       >
         Lavale's Porfolio
       </a>
-      <ul className="hidden md:flex gap-10">
+      <ul className="hidden md:flex gap-10 mr-32">
         <a
           href="#Home"
           className=" cursor-pointer opacity-70 transition-all duration-300 hover:opacity-100"
@@ -45,7 +45,7 @@ const Navbar = () => {
       <ul className="hidden md:flex gap-5">
         <li>
           <a
-            href="#github"
+            href="https://github.com/Lavale1012"
             className="cursor-pointer opacity-70 transition-all duration-300 hover:opacity-100 text-xl hover:text-orange-500"
           >
             <FaGithub />
@@ -53,7 +53,7 @@ const Navbar = () => {
         </li>
         <li>
           <a
-            href="#LinkedIn"
+            href="https://www.linkedin.com/in/lavale-butterfield/"
             className="cursor-pointer opacity-70 transition-all duration-300 hover:opacity-100 hover:text-blue-800 text-xl"
           >
             <FaLinkedin />
@@ -100,7 +100,7 @@ const Navbar = () => {
           <ul className="flex flex-wrap gap-5">
             <li>
               <a
-                href="#github"
+                href="https://github.com/Lavale1012"
                 className="cursor-pointer opacity-70 transition-all duration-300 hover:opacity-100 text-xl hover:text-orange-500"
               >
                 <FaGithub />
@@ -108,7 +108,7 @@ const Navbar = () => {
             </li>
             <li>
               <a
-                href="#LinkedIn"
+                href="https://www.linkedin.com/in/lavale-butterfield/"
                 className="cursor-pointer opacity-70 transition-all duration-300 hover:opacity-100 hover:text-blue-800 text-xl"
               >
                 <FaLinkedin />

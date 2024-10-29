@@ -1,22 +1,11 @@
 import image from "/public/profile.jpeg";
 import { motion } from "framer-motion";
 
-const ProjectCard = (project) => {
-  return (
-    <div>
-      <img src="" />
-      <div>{project.title}</div>
-      <div>{project.description}</div>
-      <div>{project.Tech}</div>
-    </div>
-  );
-};
-
 const Hero = () => {
   return (
     <div
       id="Home"
-      className=" px-16 flex min-h-screen w-full items-center justify-center py-28   flex-col gap-5 "
+      className=" px-16 flex min-h-screen w-full items-center justify-center py-16  pt-28 flex-col gap-5 "
     >
       <div className="flex flex-col justify-center items-center gap-10 text-white">
         <motion.div
@@ -44,11 +33,14 @@ const Hero = () => {
           Software Engineer
         </h3>
         <p className=" md:text-base text-pretty text-sm text-gray-400">
-          I am a software engineer skilled in React, Next.js, and Tailwind,
-          focused on building clean, scalable applications. From front-end
-          design to seamless database integration with PostgreSQL, I create
-          efficient solutions for dynamic user experience. Let's build somthing
-          great together!
+          I’m a software engineer skilled in JavaScript, React, Next.js,
+          Tailwind CSS, and full-stack development, with a strong foundation in
+          object-oriented programming, API integration, and Agile methodologies.
+          I specialize in building clean, scalable applications, from responsive
+          front-end designs to secure back-end functionality with seamless
+          RESTful API integration, all focused on delivering optimal user
+          experiences. Let’s collaborate to build innovative and impactful
+          software!
         </p>
       </motion.div>
     </div>

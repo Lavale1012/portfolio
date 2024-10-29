@@ -1,4 +1,3 @@
-import { FaReact } from "react-icons/fa";
 import image2 from "/public/2.png";
 import image3 from "/public/3.png";
 import image4 from "/public/4.png";
@@ -7,24 +6,28 @@ import { motion } from "framer-motion";
 const projectData = [
   {
     image: image2,
-    title: "Project 1",
+    title: "Real-Time Chat Application",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor orci vel libero fermentum, ac pharetra arcu tristique. Sed euismod, nunc vel fermentum hendrerit, neque erat bibendum lectus, vel tincidunt lectus lectus vel velit.",
-    Tech: ["React", "Tailwind CSS"],
+      "Developed a real-time chat application using JavaScript, React, Socket.IO, and Tailwind CSS, enabling users to join unique chat rooms for seamless text and photo messaging. The application offers a dynamic user experience, with instantaneous message updates, photo sharing capabilities, and custom chat rooms for private or group interactions. Socket.IO powers the real-time data synchronization, ensuring all participants view messages and media as they’re shared, while Tailwind CSS provides a responsive, visually appealing interface.",
+    Tech: ["React", "Node", "Tailwind CSS"],
+    sourceCode: "https://github.com/Lavale1012/ChatApp-main",
   },
   {
     image: image3,
-    title: "Project 2",
+    title: "LiveDocs - Live document collaboration application",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor orci vel libero fermentum, ac pharetra arcu tristique. Sed euismod, nunc vel fermentum hendrerit, neque erat bibendum lectus, vel tincidunt lectus lectus vel velit.",
-    Tech: ["React", "Tailwind CSS"],
+      "Built a robust document collaboration platform with JavaScript, Next.js, Clerk, and Liveblocks, facilitating real-time editing and integrated live chat for seamless user interaction. Implemented secure, scalable user authentication via Clerk and optimized API integration to boost interaction speed by 30%. Enhanced functionality and user experience with efficient state management and responsive design, ensuring smooth, reliable collaboration across devices.",
+    Tech: ["React", "Node", "Next", "Tailwind CSS"],
+    sourceCode: "https://github.com/Lavale1012/LiveDocs",
   },
   {
     image: image4,
-    title: "Project 3",
+    title: "Weather application",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor orci vel libero fermentum, ac pharetra arcu tristique. Sed euismod, nunc vel fermentum hendrerit, neque erat bibendum lectus, vel tincidunt lectus lectus vel velit.",
-    Tech: ["React", "Tailwind CSS"],
+      "Created a React.js-based weather application with real-time global forecasts by integrating robust weather APIs. Optimized application performance, achieving a 20% reduction in load times to deliver an enhanced user experience. Built a responsive, scalable interface using JavaScript, HTML, and CSS, designed to accommodate up to 1,000 daily users with smooth and reliable functionality across devices.",
+
+    Tech: ["React", "Node", "CSS"],
+    sourceCode: "https://github.com/Lavale1012/Weather-App",
   },
 ];
 
@@ -47,13 +50,19 @@ const ProjectCard = ({ project }) => {
                 {tech}
               </span>
             ))}
+            <a
+              href={project.sourceCode}
+              className="rounded-lg bg-gradient-to-r from-blue-500 to-pink-500 p-3 hover:scale-105 transition-all duration-300"
+            >
+              Source Code
+            </a>
           </div>
         </div>
       </div>
     </ScrollReveal>
   );
 };
-const ScrollReveal = ({ children }) => {
+export const ScrollReveal = ({ children }) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 100 }}

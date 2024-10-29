@@ -2,13 +2,13 @@ import {
   BiLogoTypescript,
   BiLogoJavascript,
   BiLogoPython,
-  BiLogoFlask,
-  BiLogoPostgresql,
+  BiLogoNodejs,
 } from "react-icons/bi";
 import { FaGitAlt, FaDocker } from "react-icons/fa";
 import { FaReact } from "react-icons/fa6";
 import { SiNextdotjs, SiExpress } from "react-icons/si";
 import { motion } from "framer-motion";
+import { GrMysql } from "react-icons/gr";
 
 const Tech = () => {
   const variants = {
@@ -18,7 +18,7 @@ const Tech = () => {
   return (
     <div
       id="Tech"
-      className="flex flex-col min-h-[70vh] w-full items-center justify-center gap-16 md:gap-32"
+      className="flex flex-col min-h-[70vh] w-full items-center justify-center gap-16 md:gap-28"
     >
       <motion.h1
         className=" text-4xl font-light text-white md:text-6xl"
@@ -51,6 +51,14 @@ const Tech = () => {
           transition={{ duration: 0.5 }}
         >
           <BiLogoJavascript className="cursor-pointer text-[80px] text-[#F7DF1E] transition-all duration-300 hover:-translate-y-5 sm:text-[100px] md:text-[120px]" />
+        </motion.div>
+        <motion.div
+          variants={variants}
+          initial="hidden"
+          whileInView="visible"
+          transition={{ duration: 0.5 }}
+        >
+          <BiLogoNodejs className="cursor-pointer text-[80px] text-[#F7DF1E] transition-all duration-300 hover:-translate-y-5 sm:text-[100px] md:text-[120px]" />
         </motion.div>
         <motion.div
           variants={variants}
@@ -95,21 +103,14 @@ const Tech = () => {
         >
           <SiExpress className="cursor-pointer text-[80px] text-white transition-all duration-300 hover:-translate-y-5 sm:text-[100px] md:text-[120px]" />
         </motion.div>
+
         <motion.div
           variants={variants}
           initial="hidden"
           whileInView="visible"
           transition={{ duration: 0.5 }}
         >
-          <BiLogoFlask className="cursor-pointer text-[80px] text-white transition-all duration-300 hover:-translate-y-5 sm:text-[100px] md:text-[120px]" />
-        </motion.div>
-        <motion.div
-          variants={variants}
-          initial="hidden"
-          whileInView="visible"
-          transition={{ duration: 0.5 }}
-        >
-          <BiLogoPostgresql className="cursor-pointer text-[80px] text-blue-400 transition-all duration-300 hover:-translate-y-5 sm:text-[100px] md:text-[120px]" />
+          <GrMysql className="cursor-pointer text-[80px] text-blue-400 transition-all duration-300 hover:-translate-y-5 sm:text-[100px] md:text-[120px]" />
         </motion.div>
         <motion.div
           variants={variants}
