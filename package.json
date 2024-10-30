@@ -1,5 +1,5 @@
 {
-  "homepage": "https://your-username.github.io/porfolio",
+  "homepage": "https://lavale1012.github.io/porfolio",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
