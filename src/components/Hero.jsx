@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <div
       id="Home"
-      className=" px-16 flex min-h-screen w-full items-center justify-center py-16  pt-28 flex-col gap-5 "
+      className=" px-16 flex min-h-screen w-full items-center justify-center py-16  pt-36 flex-col gap-5 "
     >
       <div className="flex flex-col justify-center items-center gap-10 text-white">
         <motion.div
