@@ -11,6 +11,7 @@ const projectData = [
       "Developed a real-time chat application using JavaScript, React, Socket.IO, and Tailwind CSS, enabling users to join unique chat rooms for seamless text and photo messaging. The application offers a dynamic user experience, with instantaneous message updates, photo sharing capabilities, and custom chat rooms for private or group interactions. Socket.IO powers the real-time data synchronization, ensuring all participants view messages and media as they’re shared, while Tailwind CSS provides a responsive, visually appealing interface.",
     Tech: ["React", "Node", "Tailwind CSS"],
     sourceCode: "https://github.com/Lavale1012/ChatApp-main",
+    address: "https://quick-chat-gamma.vercel.app/",
   },
   {
     image: image3,
@@ -19,6 +20,7 @@ const projectData = [
       "Built a robust document collaboration platform with JavaScript, Next.js, Clerk, and Liveblocks, facilitating real-time editing and integrated live chat for seamless user interaction. Implemented secure, scalable user authentication via Clerk and optimized API integration to boost interaction speed by 30%. Enhanced functionality and user experience with efficient state management and responsive design, ensuring smooth, reliable collaboration across devices.",
     Tech: ["React", "Node", "Next", "Tailwind CSS"],
     sourceCode: "https://github.com/Lavale1012/LiveDocs",
+    address: "https://weather-app-nu-ashy-23.vercel.app",
   },
   {
     image: image4,
@@ -32,16 +34,24 @@ const projectData = [
 ];
 
 const ProjectCard = ({ project }) => {
+  const handleImageClick = () => {
+    if (project.address) {
+      window.open(project.address, "_blank");
+    }
+  };
   return (
     <ScrollReveal>
       <div className=" flex flex-col items-center gap-8 md:flex-row md:gap-24">
         <img
           src={project.image}
           className="w-full cursor-pointer rounded-2xl transition-all duration-300 hover:scale-105 md:w-[300px]"
+          onClick={handleImageClick}
         />
+
         <div className=" flex flex-col gap-5">
           <div className=" flex flex-col gap-3">
             <div className=" text-xl font-semibold">{project.title}</div>
+            {project.address ? <h3>It&apos;s live! click the image</h3> : ""}
             <p className=" text-gray-400">{project.description}</p>
           </div>
           <div className="flex flex-wrap gap-5">
@@ -62,6 +72,7 @@ const ProjectCard = ({ project }) => {
     </ScrollReveal>
   );
 };
+
 export const ScrollReveal = ({ children }) => {
   return (
     <motion.div
