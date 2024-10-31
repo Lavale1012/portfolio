@@ -20,7 +20,6 @@ const projectData = [
       "Built a robust document collaboration platform with JavaScript, Next.js, Clerk, and Liveblocks, facilitating real-time editing and integrated live chat for seamless user interaction. Implemented secure, scalable user authentication via Clerk and optimized API integration to boost interaction speed by 30%. Enhanced functionality and user experience with efficient state management and responsive design, ensuring smooth, reliable collaboration across devices.",
     Tech: ["React", "Node", "Next", "Tailwind CSS"],
     sourceCode: "https://github.com/Lavale1012/LiveDocs",
-    address: "https://weather-app-nu-ashy-23.vercel.app/",
   },
   {
     image: image4,
@@ -30,6 +29,7 @@ const projectData = [
 
     Tech: ["React", "Node", "CSS"],
     sourceCode: "https://github.com/Lavale1012/Weather-App",
+    address: "https://weather-app-nu-ashy-23.vercel.app/",
   },
 ];
 
