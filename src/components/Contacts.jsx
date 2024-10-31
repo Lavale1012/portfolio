@@ -14,7 +14,8 @@ const Contacts = () => {
             </span>
           </h1>
           <p className=" text-center text-lg font-semibold text-gray-500">
-            Want to chat? Send me an E-mail through this button and I'll respond
+            Want to chat? Send me an E-mail through this button and I&apos;ll
+            respond
           </p>
           <a
             href="mailto:Lavale889@gmail.com"
