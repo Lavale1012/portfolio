@@ -1,77 +1,39 @@
-import image2 from "/public/2.png";
-import image3 from "/public/3.png";
-import image4 from "/public/4.png";
 import { motion } from "framer-motion";
+import image2 from "../assets/2.png";
+
+import image4 from "../assets/4.png";
+import image5 from "../assets/5.png";
 
 const projectData = [
+  {
+    image: image5,
+    title: "AI Powered Search API",
+    description:
+      "The Fragrance Search API is a powerful and intelligent backend service designed to help users discover perfumes and colognes tailored to their preferences. Built using modern web technologies and enhanced with AI capabilities, this API enables seamless searching and intelligent recommendations based on fragrance characteristics and user input.",
+    tech: ["Express", "Node", "Redis", "MongoDB", "Mongoose"],
+    sourceCode: "https://github.com/Lavale1012/Fragrance-Search-API",
+    address: "",
+  },
   {
     image: image2,
     title: "Real-Time Chat Application",
     description:
-      "Developed a real-time chat application using JavaScript, React, Socket.IO, and Tailwind CSS, enabling users to join unique chat rooms for seamless text and photo messaging. The application offers a dynamic user experience, with instantaneous message updates, photo sharing capabilities, and custom chat rooms for private or group interactions. Socket.IO powers the real-time data synchronization, ensuring all participants view messages and media as they’re shared, while Tailwind CSS provides a responsive, visually appealing interface.",
-    Tech: ["React", "Node", "Tailwind CSS"],
+      "Developed a real-time chat application using JavaScript, React, Socket.IO, and Tailwind CSS, enabling users to join unique chat rooms for seamless text and photo messaging.",
+    tech: ["React", "Node", "Tailwind CSS"],
     sourceCode: "https://github.com/Lavale1012/ChatApp-main",
     address: "https://quick-chat-gamma.vercel.app/",
   },
-  {
-    image: image3,
-    title: "LiveDocs - Live document collaboration application",
-    description:
-      "Built a robust document collaboration platform with JavaScript, Next.js, Clerk, and Liveblocks, facilitating real-time editing and integrated live chat for seamless user interaction. Implemented secure, scalable user authentication via Clerk and optimized API integration to boost interaction speed by 30%. Enhanced functionality and user experience with efficient state management and responsive design, ensuring smooth, reliable collaboration across devices.",
-    Tech: ["React", "Node", "Next", "Tailwind CSS"],
-    sourceCode: "https://github.com/Lavale1012/LiveDocs",
-  },
+
   {
     image: image4,
-    title: "Weather application",
+    title: "Weather Application",
     description:
-      "Created a React.js-based weather application with real-time global forecasts by integrating robust weather APIs. Optimized application performance, achieving a 20% reduction in load times to deliver an enhanced user experience. Built a responsive, scalable interface using JavaScript, HTML, and CSS, designed to accommodate up to 1,000 daily users with smooth and reliable functionality across devices.",
-
-    Tech: ["React", "Node", "CSS"],
+      "Created a React-based weather application with real-time global forecasts and API integration. Achieved a 20% performance boost and built a scalable UI.",
+    tech: ["React", "Node", "CSS"],
     sourceCode: "https://github.com/Lavale1012/Weather-App",
     address: "https://weather-app-nu-ashy-23.vercel.app/",
   },
 ];
-
-const ProjectCard = ({ project }) => {
-  const handleImageClick = () => {
-    if (project.address) {
-      window.open(project.address, "_blank");
-    }
-  };
-  return (
-    <ScrollReveal>
-      <div className=" flex flex-col items-center gap-8 md:flex-row md:gap-24">
-        <img
-          src={project.image}
-          className="w-full cursor-pointer rounded-2xl transition-all duration-300 hover:scale-105 md:w-[300px]"
-          onClick={handleImageClick}
-        />
-
-        <div className=" flex flex-col gap-5">
-          <div className=" flex flex-col gap-3">
-            <div className=" text-xl font-semibold">{project.title}</div>
-            {project.address ? <h3>It&apos;s live! click the image</h3> : ""}
-            <p className=" text-gray-400">{project.description}</p>
-          </div>
-          <div className="flex flex-wrap gap-5">
-            {project.Tech.map((tech, index) => (
-              <span key={index} className=" rounded-lg bg-black p-3">
-                {tech}
-              </span>
-            ))}
-            <a
-              href={project.sourceCode}
-              className="rounded-lg bg-gradient-to-r from-blue-500 to-pink-500 p-3 hover:scale-105 transition-all duration-300"
-            >
-              Source Code
-            </a>
-          </div>
-        </div>
-      </div>
-    </ScrollReveal>
-  );
-};
 
 export const ScrollReveal = ({ children }) => {
   return (
@@ -85,18 +47,69 @@ export const ScrollReveal = ({ children }) => {
     </motion.div>
   );
 };
+
+const ProjectCard = ({ project }) => {
+  const handleImageClick = () => {
+    if (project.address) {
+      window.open(project.address, "_blank");
+    }
+  };
+
+  return (
+    <ScrollReveal>
+      <div className="flex flex-col items-center gap-8 md:flex-row md:gap-24">
+        <img
+          src={project.image}
+          alt={project.title}
+          className="w-full cursor-pointer rounded-2xl transition-all duration-300 hover:scale-105 md:w-[300px]"
+          onClick={handleImageClick}
+        />
+
+        <div className="flex flex-col gap-5">
+          <div className="flex flex-col gap-3">
+            <h2 className="text-xl font-semibold">{project.title}</h2>
+            {project.address && (
+              <p className="text-sm text-blue-400">
+                Click the image to view the live demo
+              </p>
+            )}
+            <p className="text-gray-400">{project.description}</p>
+          </div>
+
+          <div className="flex flex-wrap gap-5">
+            {project.tech.map((tech, index) => (
+              <span key={index} className="rounded-lg bg-black px-4 py-2">
+                {tech}
+              </span>
+            ))}
+            <a
+              href={project.sourceCode}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-lg bg-gradient-to-r from-blue-500 to-pink-500 px-4 py-2 transition-all duration-300 hover:scale-105"
+            >
+              Source Code
+            </a>
+          </div>
+        </div>
+      </div>
+    </ScrollReveal>
+  );
+};
+
 const Projects = () => {
   return (
     <div
       id="Projects"
-      className=" flex min-h-screen w-full flex-col justify-center gap-16 items-center p-4 md:px-14 md:py-24"
+      className="flex min-h-screen w-full flex-col items-center justify-center gap-16 p-4 md:px-14 md:py-24"
     >
       <ScrollReveal>
         <h1 className="text-4xl font-light text-white md:text-6xl">
           My Projects
         </h1>
       </ScrollReveal>
-      <div className="flex w-full max-w-1000px flex-col gap-16 text-white">
+
+      <div className="flex w-full max-w-5xl flex-col gap-16 text-white">
         {projectData.map((project, index) => (
           <ProjectCard key={index} project={project} />
         ))}

@@ -4,6 +4,8 @@ import {
   BiLogoPython,
   BiLogoNodejs,
 } from "react-icons/bi";
+import { FaGolang } from "react-icons/fa6";
+import { SiMongodb } from "react-icons/si";
 import { FaGitAlt, FaDocker } from "react-icons/fa";
 import { FaReact } from "react-icons/fa6";
 import { SiNextdotjs, SiExpress } from "react-icons/si";
@@ -74,6 +76,14 @@ const Tech = () => {
           whileInView="visible"
           transition={{ duration: 0.5 }}
         >
+          <FaGolang className="cursor-pointer text-[80px] text-[#00ADD8] transition-all duration-300 hover:-translate-y-5 sm:text-[100px] md:text-[120px]" />
+        </motion.div>
+        <motion.div
+          variants={variants}
+          initial="hidden"
+          whileInView="visible"
+          transition={{ duration: 0.5 }}
+        >
           <FaGitAlt className="cursor-pointer text-[80px] text-[#F1502F] transition-all duration-300 hover:-translate-y-5 sm:text-[100px] md:text-[120px]" />
         </motion.div>
         <motion.div
@@ -111,6 +121,14 @@ const Tech = () => {
           transition={{ duration: 0.5 }}
         >
           <GrMysql className="cursor-pointer text-[80px] text-blue-400 transition-all duration-300 hover:-translate-y-5 sm:text-[100px] md:text-[120px]" />
+        </motion.div>
+        <motion.div
+          variants={variants}
+          initial="hidden"
+          whileInView="visible"
+          transition={{ duration: 0.5 }}
+        >
+          <SiMongodb className="cursor-pointer text-[80px] text-[#F1502F] transition-all duration-300 hover:-translate-y-5 sm:text-[100px] md:text-[120px]" />
         </motion.div>
         <motion.div
           variants={variants}
